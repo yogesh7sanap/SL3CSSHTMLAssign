@@ -437,3 +437,148 @@ body{
 
 /*---------------------------------Feedback Form --------------------------------------*/
 
+.FB_start1{
+
+    text-align: center;
+    font-weight: bolder;
+    color: rgb(161, 4, 161);
+    margin-top: 20px;
+    font-style: italic;
+    
+}
+
+
+.FB_start2{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+    color: forestgreen;
+}
+.Nm {
+    margin-left: 450px;
+    font-size: 25px;
+    margin-right: 25px;
+    margin-bottom: 50px;
+
+    color: rgb(19, 94, 255);
+    font-weight: bolder;
+}
+
+.Em{
+    margin-left: 450px;
+    font-size: 25px;
+    margin-right: 25px;
+    margin-bottom: 50px;
+    color: rgb(19, 94, 255);
+    font-weight: bolder;
+
+}
+.Pc{
+    margin-left: 450px;
+    font-size: 25px;
+    margin-right: 25px;
+    color: rgb(19, 94, 255);
+    font-weight: bolder;
+}
+.Mb{
+    margin-left: 450px;
+    font-size: 25px;
+    margin-right: 25px;
+    color: rgb(19, 94, 255);
+    font-weight: bolder;
+
+}
+
+.FsDD{
+    margin-left: 450px;
+    font-size: 25px;
+    margin-right: 25px;
+
+    color: rgb(19, 94, 255);
+    font-weight: bolder;
+
+}
+.IP{
+    margin-left: 80px;
+    font-size: 30px;
+    color: rgb(248, 46, 248);
+}
+
+.FB{
+    margin-left: 450px;
+    font-size: 25px;
+    margin-right: 25px;
+
+    color: rgb(19, 94, 255);
+    font-weight: bolder;
+
+}
+
+.TXA{
+    margin-left: 450px;
+    font-size: 25px;
+    margin-right: 25px;
+    color: rgb(248, 46, 248);
+
+}
+
+.SB{
+    margin-left: 700px;
+    font-size: 25px;
+    margin-right: 25px;
+    font-weight: bolder;
+    color: fuchsia;
+   
+    border-radius: 20%;
+    -webkit-border-radius: 20%;
+    -moz-border-radius: 20%;
+    -ms-border-radius: 20%;
+    -o-border-radius: 20%;
+    padding: 10px;
+}
+
+input:focus{
+    background-color: rgb(134, 241, 248);
+}
+
+.TYFB{
+    margin-left: 670px;
+    font-size: 30px;
+    margin-right: 25px;
+}
+.feedback_btn{
+    margin-left: 620px;
+    font-size: 25px;
+    margin-right: 25px;
+
+    background-color: rgb(199, 162, 60);
+    font-size: 30PX;
+    padding: 10px 10px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    
+    
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.feedback_btn:hover{
+    color: rgb(255, 5, 5);
+    text-decoration-line: none;
+    -moz-text-decoration-line: none;
+
+}
+
+.ot{
+    color:  rgb(192, 223, 54);
+}
+
+/*--------------------------------------Javascript--------------------------*/
+.err{
+    color: red;
+    font-size: 20px;
+}
