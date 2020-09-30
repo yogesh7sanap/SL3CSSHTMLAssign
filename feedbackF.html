@@ -7,34 +7,211 @@
     </head>
 
     <body>
-        <h1 style="text-align: center;"> THANKS FOR VISITING US!!</h1>
-        <h2>Give us some feedback : </h2>
-        <form class="" action="mailto:yogesh7sanap@gmail.com" method="post">
-            <label style="font-size: 20px;">Your Name : </label>
-            <input type="text" name="Your Name" ><br>
 
-            <label style="font-size: 20px;">Your Email : </label>
-            <input type="email" name="Your Email"><br>
 
-            <label for="find-us" style="font-size: 20px;">How did you find us?</label>
+        <script>
+            function myfun()
+            {
 
-            <select name="find-us" id="find-us" style="width:170px; height:24px"> 
+                /*---------------------------Name validation -----------------------------*/
+                var a=document.getElementById("user_name").value;
+
+               /*  var correct_way= /^[A-Za-z]+$/ ; */
+
+                if(a=="")
+                {
+                    document.getElementById("message").innerHTML="**Please Fill Your Name";
+                    return false;
+                }
+
+                if(a.length<3)
+                {
+                    document.getElementById("message").innerHTML="**Your Name Must be of minimum 3 characters";
+                    return false;
+                }
+
+                if(a.length>=20)
+                {
+                    document.getElementById("message").innerHTML="**Your Name Must be of maximum 20 characters";
+                    return false;
+                }
+
+                if(isNaN(a))
+                {
+                    true;
+                }
+                else
+                {
+                    document.getElementById("message").innerHTML="**Only Alphabets are allowed";
+                    return false;
+                }
+/*
+                if(a != correct_way)
+                {
+            
+                    document.getElementById("message").innerHTML="**Only alphabets are allowed";
+                    return false;
                 
-                <option value="Friend" selected>Friends</option>
-                <option value="ho">Advertisement</option>
-                <option value="Friend">Other</option>
+                }*/
+
+                /*-------------------email validations------------------*/
+
+                var e=document.myform.user_email.value;
+
+                if(e=="")
+                {
+                    document.getElementById("message_email").innerHTML="**Please Fill Your Email";
+                    return false;
+                }
+
+                if(e.indexOf('@')<=0)
+                {
+                    document.getElementById("message_email").innerHTML="**Invalid @ Position";
+                    return false;
+
+                }
+
+                if((e.charAt(e.length-4)=='.'  ) && (e.charAt(e.length-3)=='.'))
+                {
+                    document.getElementById("message_email").innerHTML="**Invalid . Position( .. Not Allowed )";
+                    return false;
+
+                }
+
+                if((e.charAt(e.length-5)=='.'  )  && (e.charAt(e.length-4)=='.'))
+                {
+                    document.getElementById("message_email").innerHTML="**Invalid . Position( .. Not Allowed )";
+                    return false;
+
+                }
+
+
+                if((e.charAt(e.length-4)!='.'  ) && (e.charAt(e.length-3)!='.'))
+                {
+                    document.getElementById("message_email").innerHTML="**Invalid . Position('.'Must be at 3rd or 4th position)";
+                    return false;
+
+                }
+                if( e.charAt(e.length-1)=='@' ||  e.charAt(e.length-2)=='@'||  e.charAt(e.length-3)=='@' ||  e.charAt(e.length-4)=='@'||  e.charAt(e.length-5)=='@' )
+                {
+                    document.getElementById("message_email").innerHTML="**Invalid @ Position";
+                    return false;
+
+                }
+
+                /*------------------------------Mobile Number validations -------------------------------*/
+
+                var m=document.getElementById("user_mobile").value;
+
+                
+                if(m=="")
+                {
+                    document.getElementById("message_mobile").innerHTML="**Please Fill Your Mobile Number";
+                    return false;
+                }
+
+                if(isNaN(m))
+                {
+                    document.getElementById("message_mobile").innerHTML="**Only numbers are allowed";
+                    return false;
+                }
+
+                if(m.length>10 || m.length<10)
+                {
+                    document.getElementById("message_mobile").innerHTML="**Mobile Number must be of 10 digits";
+                    return false;
+                }
+
+                if( m.charAt(0) != 9 && m.charAt(0) != 8 && m.charAt(0) != 7 )
+                {
+                    document.getElementById("message_mobile").innerHTML="**Mobile Number must start with either 9 or 8 or 7";
+                    return false;
+                }
+
+
+                /*-------------------------------Validation for Pin Code--------------------------------*/
+
+                var p=document.getElementById("user_pincode").value;
+
+                if(p=="")
+                {
+                    document.getElementById("message_pincode").innerHTML="**Please Fill Your Pincode";
+                    return false;
+                }
+
+                if(isNaN(p))
+                {
+                    document.getElementById("message_pincode").innerHTML="**Only Numbers( 0-9) are allowed";
+                    return false;
+                }
+
+                if(p.length <6 || p.length> 6)
+                {
+                    document.getElementById("message_pincode").innerHTML="**Pincode Must be of 6 digits";
+                    return false;
+                }
+
+
+
+
+            }
+
+
+        </script>
+
+
+
+        <h1 class="FB_start1">THANKS FOR VISITING US!! </h1>
+
+
+        <h2 class="FB_start2" >Give us some feedback : </h2>
+
+
+        <form name="myform" class="" onsubmit="return myfun() " autocomplete="off">
+
+            <label class="Nm">Your Name : </label>
+            <input class="IP" type="text" name="Your Name" id="user_name" value="">
+            <span id="message" class="err"> </span>
+
+            <br><br>
+            <label class="Em">Your Email : </label>
+            <input class="IP" type="text" id="user_email" value="">
+            <span id="message_email" class="err"> </span>
+            
+            <br><br>
+
+            <label class="Mb">Mobile No. : </label>
+            <input class="IP" type="text" id="user_mobile" value="">
+            <span id="message_mobile" class="err"> </span>
+
+            <br><br>
+            <label class="Pc">Pin Code : </label>
+            <input class="IP" type="text" id="user_pincode" value="">
+            <span id="message_pincode" class="err"> </span>
+
+            <br><br>
+            <label class="FsDD" for="find-us" >How did you find us?</label>
+
+            <select class="IP" name="find-us" id="find-us" > 
+                
+                <option class="ot" value="Friend" selected>Friends</option>
+                <option class="ot" value="ho">Advertisement</option>
+                <option class="ot" value="Friend">Other</option>
             
             </select>
 
-            <br><label style="font-size: 20px;">Give Your Feedback :</label><br>
-            <textarea name="Feedback" rows="10" cols="60"></textarea><br>
+            <br><br>
+            <label class="FB">Give Your Feedback :</label><br>
+            <textarea class="TXA" name="Feedback" rows="5" cols="50"></textarea><br>
 
-            <input type="submit" style=font-size:20px;">
+            <br>
+            <input class="SB" type="submit" value="submit" >
+            <br>
 
         </form>
 
-        <p style="font-size: 40px; text-align: center;"><strong>Thank You!!</strong></p>
-        <a class="btn" href="index.html" alt="Go to home " style="font-size: 30px;"> <strong> Go to Home Page</strong></a>
+        <p class="TYFB"><strong>Thank You!!</strong></p>
+        <a class="feedback_btn" href="index.html" alt="Go to home "> <strong> Go to Home Page</strong></a>
 
     </body>
 </html>
